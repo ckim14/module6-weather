@@ -130,7 +130,7 @@ function generateWeatherChunk(cityData, currentWeather) {
 
 function generateForecastChunk(cityData, forecastWeather) {
   return `<div class="forecast-day pl-3 pt-3 mb-3 col-2">
-    <p>Date: ${moment.unix(forecastWeather.dt).format("dddd")}</p>
+    <p> ${moment.unix(forecastWeather.dt).format("dddd")}</p>
     <img src="http://openweathermap.org/img/wn/${
       forecastWeather.weather[0].icon
     }@2x.png" />
