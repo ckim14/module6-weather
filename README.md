@@ -1,4 +1,4 @@
-# module6-weather
+# Module 6 Weather App
 
 
 # Purpose
