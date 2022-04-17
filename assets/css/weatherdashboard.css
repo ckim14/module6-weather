@@ -5,3 +5,37 @@
 h1 {
   color: white;
 }
+
+body {
+  background-color: lightblue;
+}
+
+.uvi-ok {
+  background-color: green;
+}
+
+.uvi-moderate {
+  background-color: yellow;
+}
+
+.uvi-severe {
+  background-color: red;
+}
+
+ul.searchHistory {
+  list-style: none;
+}
+
+li.search-history-item {
+  display: block;
+  cursor: pointer;
+  margin: 3px 10px;
+  text-align: center;
+  width: 250px;
+  color: #ddd;
+  background-color: rgb(120, 120, 192);
+  border-radius: 5px;
+}
+
+.forecast-day {
+}
