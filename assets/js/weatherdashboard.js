@@ -82,7 +82,7 @@ async function getCurrentWeather(cityData) {
 async function getCityData(addToHistory) {
   var city = $("#enterCity").val();
   var getLatLong = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`
   );
   if (getLatLong.ok) {
     var latLong = await getLatLong.json();
@@ -116,7 +116,7 @@ function generateWeatherChunk(cityData, currentWeather) {
         <h2 id="cityDetail">
             ${cityData.name} ${todaysDate}
         </h2>
-        <img src="http://openweathermap.org/img/wn/${currentWeather.current.weather[0].icon}@2x.png" />
+        <img src="https://openweathermap.org/img/wn/${currentWeather.current.weather[0].icon}@2x.png" />
         <p>Temperature: ${currentWeather.current.temp} °F</p>
         <p>Humidity: ${currentWeather.current.humidity}\%</p>
         <p>Wind Speed: ${currentWeather.current.wind_speed} MPH</p>
@@ -131,7 +131,7 @@ function generateWeatherChunk(cityData, currentWeather) {
 function generateForecastChunk(cityData, forecastWeather) {
   return `<div class="forecast-day pl-3 pt-3 mb-3 col-2">
     <p> ${moment.unix(forecastWeather.dt).format("dddd")}</p>
-    <img src="http://openweathermap.org/img/wn/${
+    <img src="https://openweathermap.org/img/wn/${
       forecastWeather.weather[0].icon
     }@2x.png" />
     <p>Temperature: ${forecastWeather.main.temp} °F</p>
